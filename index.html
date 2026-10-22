@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Yashaswini A S | Cybersecurity Portfolio</title>
+  <meta name="description" content="Personal portfolio of Yashaswini A S, Computer Science Engineering student interested in cybersecurity, Linux, networking, cloud and DevOps.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b1220;
+      color: #e5edf7;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    /* Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #101a2c;
+      border-bottom: 1px solid #24334b;
+    }
+
+    .navbar {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      color: #7ce4d2;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #c5d2e5;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #7ce4d2;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 100px 0 85px;
+      background:
+        radial-gradient(ellipse at top right, #183d52 0%, transparent 55%),
+        #0b1220;
+    }
+
+    .eyebrow {
+      color: #7ce4d2;
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 7vw, 66px);
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 span {
+      color: #7ce4d2;
+    }
+
+    .hero h2 {
+      color: #b8c8dd;
+      font-size: clamp(18px, 3vw, 25px);
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 680px;
+      color: #aabbd1;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 7px;
+      background: #7ce4d2;
+      color: #0b1220;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 5px 10px 5px 0;
+      transition: transform 0.2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button.secondary {
+      background: transparent;
+      border: 1px solid #52667f;
+      color: #e5edf7;
+    }
+
+    /* Main sections */
+    main {
+      padding: 25px 0 60px;
+    }
+
+    section {
+      padding: 55px 0;
+      scroll-margin-top: 80px;
+    }
+
+    .section-title {
+      font-size: 30px;
+      margin-bottom: 12px;
+      color: #f4f8ff;
+    }
+
+    .section-intro {
+      color: #aabbd1;
+      max-width: 700px;
+      margin-bottom: 28px;
+    }
+
+    .panel {
+      background: #121e31;
+      border: 1px solid #263750;
+      border-radius: 14px;
+      padding: 28px;
+    }
+
+    .panel p {
+      color: #b8c8dd;
+    }
+
+    /* Education */
+    .education-title {
+      font-size: 20px;
+      margin-bottom: 6px;
+    }
+
+    .muted {
+      color: #9eb0c8;
+    }
+
+    /* Skills */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skill {
+      background: #172c40;
+      border: 1px solid #2b5361;
+      color: #a6eee1;
+      border-radius: 30px;
+      padding: 8px 15px;
+      font-size: 14px;
+    }
+
+    /* Projects */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: #121e31;
+      border: 1px solid #263750;
+      border-radius: 14px;
+      padding: 25px;
+    }
+
+    .project-card h3 {
+      color: #7ce4d2;
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .project-card p {
+      color: #b8c8dd;
+      margin-bottom: 15px;
+    }
+
+    .status {
+      display: inline-block;
+      border: 1px solid #38685e;
+      color: #a6eee1;
+      background: #17342f;
+      border-radius: 20px;
+      padding: 4px 10px;
+      font-size: 12px;
+    }
+
+    .notice {
+      font-size: 13px;
+      color: #9eb0c8;
+      margin-top: 18px;
+    }
+
+    /* Contact */
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .contact-links a {
+      color: #7ce4d2;
+      text-decoration: none;
+      border: 1px solid #2b5361;
+      padding: 10px 16px;
+      border-radius: 7px;
+    }
+
+    .contact-links a:hover {
+      background: #172c40;
+    }
+
+    footer {
+      border-top: 1px solid #24334b;
+      background: #101a2c;
+      padding: 24px 0;
+      text-align: center;
+      color: #9eb0c8;
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      .navbar {
+        padding: 15px 0;
+        flex-direction: column;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .hero {
+        padding: 70px 0;
+      }
+
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 40px 0;
+      }
+
+      .panel,
+      .project-card {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container navbar">
+      <a class="logo" href="#home">Yashaswini A S</a>
+
+      <nav>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Profiles</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero" id="home">
+    <div class="container">
+      <p class="eyebrow">Computer Science Engineering Student</p>
+
+      <h1>Hi, I'm <span>Yashaswini</span></h1>
+
+      <h2>Cybersecurity Learner | Linux | Networking | Cloud & DevOps</h2>
+
+      <p>
+        I am a Computer Science Engineering student interested in
+        cybersecurity and infrastructure technologies. I am building
+        my knowledge through hands-on learning, practical labs and
+        personal projects.
+      </p>
+
+      <a class="button" href="#projects">Explore Projects</a>
+      <a class="button secondary"
+         href="https://github.com/YashaswiniAS30">
+        GitHub Profile
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <div class="container">
+
+      <section id="about">
+        <h2 class="section-title">About Me</h2>
+
+        <div class="panel">
+          <p>
+            I am pursuing Computer Science Engineering and exploring
+            cybersecurity, Linux, computer networking, cloud computing
+            and DevOps. My goal is to strengthen my technical skills
+            and grow into a cybersecurity engineering role.
+          </p>
+        </div>
+      </section>
+
+      <section id="education">
+        <h2 class="section-title">Education</h2>
+
+        <div class="panel">
+          <h3 class="education-title">
+            Bachelor of Engineering – Computer Science
+          </h3>
+
+          <p>PES College of Engineering, Mandya</p>
+
+          <p class="muted">
+            Currently pursuing my engineering degree.
+          </p>
+        </div>
+      </section>
+
+      <section id="skills">
+        <h2 class="section-title">Skills & Learning</h2>
+
+        <p class="section-intro">
+          Technologies and topics I am studying and practising.
+        </p>
+
+        <div class="skills">
+          <span class="skill">Cybersecurity Fundamentals</span>
+          <span class="skill">Linux</span>
+          <span class="skill">Kali Linux</span>
+          <span class="skill">Computer Networking</span>
+          <span class="skill">Cloud Computing</span>
+          <span class="skill">DevOps Fundamentals</span>
+          <span class="skill">Git & GitHub</span>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2 class="section-title">Cybersecurity Projects</h2>
+
+        <p class="section-intro">
+          Practical security learning and analysis in authorized
+          environments.
+        </p>
+
+        <div class="project-grid">
+
+          <article class="project-card">
+            <h3>Keylogger Analysis</h3>
+
+            <p>
+              Studied keylogging behaviour, potential security risks
+              and ways to identify and defend against unauthorized
+              keystroke monitoring in a controlled lab.
+            </p>
+
+            <span class="status">Completed</span>
+          </article>
+
+          <article class="project-card">
+            <h3>RAT Security Analysis</h3>
+
+            <p>
+              Studied remote-access threats, their security risks,
+              and defensive detection concepts in an authorized
+              lab environment.
+            </p>
+
+            <span class="status">Completed</span>
+          </article>
+
+        </div>
+
+        <p class="notice">
+          Project descriptions should reflect the work actually
+          completed. Only use “Completed” if you finished the
+          described analysis or lab exercise.
+        </p>
+      </section>
+
+      <section id="contact">
+        <h2 class="section-title">Profiles</h2>
+
+        <div class="panel">
+          <p>
+            Explore my profile and follow my learning journey.
+          </p>
+
+          <div class="contact-links">
+            <a href="https://github.com/YashaswiniAS30"
+               target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
+
+            <a href="https://www.linkedin.com/in/yashaswini-a-s-611646345"
+               target="_blank" rel="noopener noreferrer">
+              LinkedIn
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Yashaswini A S · Personal Portfolio
+    </div>
+  </footer>
+
+</body>
+</html>
